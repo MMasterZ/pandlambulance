@@ -14,7 +14,7 @@ const path = require('path');
 
 module.exports = configure(function (/* ctx */) {
   return {
-    
+
 
     // https://v2.quasar.dev/quasar-cli/prefetch-feature
     // preFetch: true,
@@ -24,7 +24,7 @@ module.exports = configure(function (/* ctx */) {
     // https://v2.quasar.dev/quasar-cli/boot-files
     boot: [
       'i18n',
-      
+
     ],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#css
@@ -36,7 +36,7 @@ module.exports = configure(function (/* ctx */) {
     extras: [
       // 'ionicons-v4',
       // 'mdi-v5',
-      // 'fontawesome-v6',
+      'fontawesome-v6',
       // 'eva-icons',
       // 'themify',
       // 'line-awesome',
@@ -111,9 +111,9 @@ module.exports = configure(function (/* ctx */) {
       plugins: []
     },
 
-    // animations: 'all', // --- includes all animations
+    animations: 'all', // --- includes all animations
     // https://v2.quasar.dev/options/animations
-    animations: [],
+    // animations: [],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#property-sourcefiles
     // sourceFiles: {
