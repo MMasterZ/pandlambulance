@@ -7,15 +7,16 @@
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue'
-
-
+import { analytics } from "src/router";
+import { defineComponent, onMounted, ref } from "vue";
 
 export default defineComponent({
-  name: 'MainLayout',
+  name: "MainLayout",
 
-  setup () {
-
-  }
-})
+  setup() {
+    onMounted(() => {
+      // analytics;
+    });
+  },
+});
 </script>
