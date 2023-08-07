@@ -19,9 +19,10 @@
     <!-- #region Banner -->
     <div
       class="relative-position"
-      :class="
-        responsiveSize.width <= 600 ? 'banner-main-mobile' : 'banner-main'
-      "
+      :class="{
+        'banner-main-mobile': responsiveSize.width <= 600,
+        'banner-main': responsiveSize.width > 600,
+      }"
     >
       <div style="width: 1900px" class="absolute-center">
         <div v-for="i in 4" :key="`image-banner-${i}`">
@@ -40,19 +41,17 @@
       <div class="backdrop"></div>
       <div
         class="absolute-center"
-        :class="
-          responsiveSize.width <= 600
-            ? 'banner-content-mobile'
-            : 'banner-content'
-        "
+        :class="{
+          'banner-content-mobile': responsiveSize.width <= 600,
+          'banner-content': responsiveSize.width > 600,
+        }"
       >
         <div class="relative-position q-pa-md fit">
           <div class="font-b text-header-brand">P&L Ambulance</div>
           <div class="f20 font-m text-content-brand">
             ยินดีให้บริการรถฉุกเฉิน ตลอด 24 ชม. บริการเคลื่อนย้ายผู้ป่วย
-            บริการโดยเจ้าหน้าที่บุคลากรผู้มีประสบการณ์ดูแลและควบคุมคุณภาพโดยทีมแพทย์และพยาบาลวิชาชีพเฉพาะทาง
-            พร้อมรถพยาบาลทีมีอุปกรณ์ครบครันและทันสมัย สะอาดปลอดภัยได้มาตฐาน
-            มีประกันภัยการเดินทางให้แก่ผู้ใช้บริการ
+            บริการโดยเจ้าหน้าที่บุคลากรผู้มีประสบการณ์ดูแลพร้อมรถพยาบาลที่มีอุปกรณ์ครบครันและทันสมัย
+            สะอาดปลอดภัยได้มาตฐาน มีประกันภัยการเดินทางให้แก่ผู้ใช้บริการ
           </div>
         </div>
       </div>
@@ -84,22 +83,55 @@
             </a>
           </div>
 
-          <div class="q-pa-md" style="max-width: 350px; width: 100%">
+          <div
+            class="q-pa-md"
+            style="max-width: 400px; width: 43%; min-width: 350px"
+          >
             <a
               :href="`${contactMenu[2].link}`"
               style="text-decoration: none"
               target="__blank"
             >
               <q-btn round push class="box-contact-phone">
-                <div class="row justify-center" align="left">
+                <div class="row justify-center q-pa-sm" align="left">
                   <div class="q-pa-sm self-center">
-                    <q-icon :name="contactMenu[2].icon" size="25px"></q-icon>
+                    <q-icon name="fas fa-phone" size="30px"></q-icon>
                   </div>
-                  <div class="self-center f20 font-m q-pa-sm">
+                  <div class="self-center f26 font-m q-pa-sm">
                     {{ `083-058-7408 (คลิ๊ก)` }}
                   </div>
                   <div class="f16">
                     {{ contactMenu[2].subText }}
+                  </div>
+                </div>
+              </q-btn>
+            </a>
+          </div>
+
+          <div
+            class="q-pa-md"
+            style="max-width: 400px; width: 43%; min-width: 350px"
+          >
+            <a
+              :href="`tel:0617749222`"
+              style="text-decoration: none"
+              target="__blank"
+            >
+              <q-btn
+                round
+                push
+                class="box-contact-phone"
+                style="animation-delay: 0.5s"
+              >
+                <div class="row justify-center q-pa-sm" align="left">
+                  <div class="q-pa-sm self-center">
+                    <q-icon name="fas fa-phone" size="30px"></q-icon>
+                  </div>
+                  <div class="self-center f26 font-m q-pa-sm">
+                    {{ `061-774-9222 (คลิ๊ก)` }}
+                  </div>
+                  <div class="f16">
+                    {{ "(คุณป๊อป)" }}
                   </div>
                 </div>
               </q-btn>
@@ -162,8 +194,11 @@
             >
               <div
                 class="col-1 width-fit q-py-xs"
-                :class="responsiveSize.width <= 600 ? 'q-mr-sm' : 'q-mr-md'"
                 style="width: fit-content"
+                :class="{
+                  'q-mr-sm': responsiveSize.width <= 600,
+                  'q-mr-md': responsiveSize.width > 600,
+                }"
               >
                 <q-icon
                   name="fas fa-check-circle"
@@ -188,8 +223,11 @@
             >
               <div
                 class="col-1 width-fit q-py-xs"
-                :class="responsiveSize.width <= 600 ? 'q-mr-sm' : 'q-mr-md'"
                 style="width: fit-content"
+                :class="{
+                  'q-mr-sm': responsiveSize.width <= 600,
+                  'q-mr-md': responsiveSize.width > 600,
+                }"
               >
                 <q-icon
                   name="fas fa-check-circle"
@@ -304,38 +342,46 @@
         <div class="col-12 self-center row justify-center">
           <div
             class="col-6 self-center q-pa-md"
-            :align="responsiveSize.width <= 600 ? 'left' : 'center'"
             style="max-width: 600px; width: 100%"
+            :align="responsiveSize.width <= 600 ? 'left' : 'center'"
           >
             <div class="">
               <span class="f30 text-white font-b"> ติดต่อเรา </span>
             </div>
             <div
               class="row"
-              :class="
-                responsiveSize.width <= 600 ? 'q-mt-md' : 'justify-center'
-              "
+              :class="{
+                'q-mt-md': responsiveSize.width <= 600,
+                'justify-center': responsiveSize.width > 600,
+              }"
               style="border-radius: 3px"
             >
               <div
                 class="q-py-sm"
-                :class="responsiveSize.width <= 600 ? 'col-12' : 'q-ma-sm'"
                 v-show="itemContractFooter.name != 'phone'"
                 v-for="(itemContractFooter, indexContractFooter) in contactMenu"
                 :key="indexContractFooter"
                 align="center"
+                :class="{
+                  'col-12': responsiveSize.width <= 600,
+                  'q-ma-sm': responsiveSize.width > 600,
+                }"
               >
                 <a
                   :href="itemContractFooter.link"
                   target="__blank"
                   style="text-decoration: none"
                 >
-                  <div :class="responsiveSize.width <= 600 ? 'row' : ''">
+                  <div
+                    :class="{
+                      row: responsiveSize.width <= 600,
+                    }"
+                  >
                     <div class="col-1 width-fit" style="width: 80px">
                       <q-btn
                         round
                         flat
-                        :class="`bg-${itemContractFooter.color}`"
+                        :style="`background-color:${itemContractFooter.hex}`"
                       >
                         <div>
                           <q-icon
@@ -355,13 +401,16 @@
               </div>
             </div>
 
-            <div class="q-mt-md">
+            <div class="q-mt-md q-mb-sm">
               <span class="f30 font-b">
                 <span class="text-white">หรือต่อสายด่วนโทร</span>
               </span>
             </div>
 
-            <div class="col-12">
+            <div
+              class="col-12"
+              :class="{ 'justify-center row': responsiveSize.width > 600 }"
+            >
               <div class="phone-box">
                 <div class="row">
                   <div class="col-1 q-pa-md width-fit" style="width: 70px">
@@ -372,13 +421,25 @@
                     ></q-icon>
                   </div>
                   <div class="col self-center q-pa-sm" align="left">
-                    <span class="f26">083-058-7408</span>
+                    <span class="f26"
+                      >083-058-7408 <span class="f20">(คุณเหลียง)</span></span
+                    >
                   </div>
-                  <div
-                    class="col-12"
-                    :class="responsiveSize.width <= 600 ? 'q-px-md' : ''"
-                  >
-                    คุณ ณัฏฐเอก ชวรัตน์ศศิกุล (เหลียง)
+                </div>
+              </div>
+              <div class="phone-box">
+                <div class="row">
+                  <div class="col-1 q-pa-md width-fit" style="width: 70px">
+                    <q-icon
+                      size="30px"
+                      class="text-white"
+                      name="fas fa-phone"
+                    ></q-icon>
+                  </div>
+                  <div class="col self-center q-pa-sm" align="left">
+                    <span class="f26"
+                      >061-774-9222 <span class="f20">(คุณป๊อป)</span></span
+                    >
                   </div>
                 </div>
               </div>
@@ -424,7 +485,8 @@
               round
               @click="itemContract.link"
               class="float-button line"
-              :class="`${itemContract.name} bg-${itemContract.color}`"
+              :class="`${itemContract.name}`"
+              :style="`background-color:${itemContract.hex}`"
             >
               <q-icon :name="itemContract.icon"></q-icon>
             </q-btn>
@@ -467,6 +529,7 @@ export default {
         name: "line",
         icon: "fab fa-line",
         color: "green",
+        hex: "#4CAF50",
         link: "https://line.me/ti/p/-CuUb5ZsWW",
         text: "Line ID: liangpop0211",
         subText: "",
@@ -476,6 +539,7 @@ export default {
         name: "facebook",
         icon: "fab fa-facebook",
         color: "blue",
+        hex: "#004AA7",
         link: "https://www.facebook.com/profile.php?id=100026942845287&mibextid=b06tZ0",
         text: "Facebook: P&L Ambulance",
         subText: "",
@@ -485,6 +549,7 @@ export default {
         name: "phone",
         icon: "fas fa-phone",
         color: "orange",
+        hex: "#DA2C22",
         link: "tel:0830587408",
         text: "Tel: 083-058-7408",
         subText: "คุณ ณัฏฐเอก ชวรัตน์ศศิกุล (เหลียง)",
