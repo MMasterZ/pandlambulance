@@ -7,7 +7,6 @@
 </template>
 
 <script>
-import { analytics } from "src/router";
 import { defineComponent, onMounted, ref } from "vue";
 
 export default defineComponent({

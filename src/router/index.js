@@ -2,23 +2,6 @@ import { route } from 'quasar/wrappers'
 import { createRouter, createMemoryHistory, createWebHistory, createWebHashHistory } from 'vue-router'
 import routes from './routes'
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
-
-
-const firebaseConfig = {
-  apiKey: "AIzaSyDT09TEyDsS47z0g13xkZvHRTU5IxXGyOE",
-  authDomain: "pandlambulance.firebaseapp.com",
-  projectId: "pandlambulance",
-  storageBucket: "pandlambulance.appspot.com",
-  messagingSenderId: "827008515099",
-  appId: "1:827008515099:web:1408187633c1d2d49e0cbe",
-  measurementId: "G-MFN53J5WR9"
-};
-
-const app = initializeApp(firebaseConfig);
-export const analytics = getAnalytics(app);
-
 /*
  * If not building with SSR mode, you can
  * directly export the Router instantiation;
