@@ -47,11 +47,15 @@
         }"
       >
         <div class="relative-position q-pa-md fit">
-          <div class="font-b text-header-brand">P&L Ambulance</div>
+          <div class="font-b">
+            <h1 class="text-header-brand">P&L Ambulance</h1>
+          </div>
           <div class="f20 font-m text-content-brand">
-            ยินดีให้บริการรถฉุกเฉิน ตลอด 24 ชม. บริการเคลื่อนย้ายผู้ป่วย
-            บริการโดยเจ้าหน้าที่บุคลากรผู้มีประสบการณ์ดูแลพร้อมรถพยาบาลที่มีอุปกรณ์ครบครันและทันสมัย
-            สะอาดปลอดภัยได้มาตฐาน มีประกันภัยการเดินทางให้แก่ผู้ใช้บริการ
+            <p>
+              ยินดีให้บริการรถฉุกเฉิน ตลอด 24 ชม. บริการเคลื่อนย้ายผู้ป่วย
+              บริการโดยเจ้าหน้าที่บุคลากรผู้มีประสบการณ์ดูแลพร้อมรถพยาบาลที่มีอุปกรณ์ครบครันและทันสมัย
+              สะอาดปลอดภัยได้มาตฐาน มีประกันภัยการเดินทางให้แก่ผู้ใช้บริการ
+            </p>
           </div>
         </div>
       </div>
@@ -62,8 +66,8 @@
     <div class="body-main relative-position" algn="center">
       <div class="q-pa-md" style="max-width: 1200px; width: 100%; margin: auto">
         <div class="q-my-md">
-          <div class="f30 text-title font-b" align="center">
-            สอบถามข้อมูลและค่าบริการ
+          <div class="text-title font-b" align="center">
+            <h1 class="f30">สอบถามข้อมูลและค่าบริการ</h1>
           </div>
         </div>
 
@@ -179,12 +183,12 @@
         class="q-pa-md f20 box-body-content"
         :align="responsiveSize.width <= 600 ? 'left' : 'center'"
       >
-        <div class="q-my-md">
+        <div>
           <div
-            class="f30 text-title font-b"
+            class="text-title font-b"
             :align="responsiveSize.width <= 600 ? 'left' : 'center'"
           >
-            บริการรถพยาบาลของเรา
+            <h1 class="f30">บริการรถพยาบาลของเรา</h1>
           </div>
           <div class="q-pa-sm font-m">
             <div
@@ -193,7 +197,7 @@
               :key="indexService"
             >
               <div
-                class="col-1 width-fit q-py-xs"
+                class="col-1 width-fit"
                 style="width: fit-content"
                 :class="{
                   'q-mr-sm': responsiveSize.width <= 600,
@@ -206,15 +210,17 @@
                   size="20px"
                 ></q-icon>
               </div>
-              <div align="left" class="col self-center q-py-xs">
-                {{ `${itemService}` }}
+              <div align="left" class="col self-center">
+                <p>{{ `${itemService}` }}</p>
               </div>
             </div>
           </div>
         </div>
 
         <div class="q-my-md">
-          <div class="f30 text-title font-b">บริการรถพยาบาล Standby</div>
+          <div class="text-title font-b">
+            <h1 class="f30">บริการรถพยาบาล Standby</h1>
+          </div>
           <div class="q-pa-sm font-m">
             <div
               class="row q-pa-xs"
@@ -222,7 +228,7 @@
               :key="indexStandby"
             >
               <div
-                class="col-1 width-fit q-py-xs"
+                class="col-1 width-fit"
                 style="width: fit-content"
                 :class="{
                   'q-mr-sm': responsiveSize.width <= 600,
@@ -235,8 +241,8 @@
                   size="20px"
                 ></q-icon>
               </div>
-              <div align="left" class="col self-start q-py-xs">
-                {{ `${itemStandby}` }}
+              <div align="left" class="col self-start">
+                <p>{{ `${itemStandby}` }}</p>
               </div>
             </div>
           </div>
@@ -255,7 +261,9 @@
             class="col-12 self-start q-pa-md"
             :align="responsiveSize.width <= 600 ? 'left' : 'center'"
           >
-            <span class="text-white f30 text-title font-b">ผลงานของเรา</span>
+            <span class="text-white text-title font-b">
+              <h1 class="f30" style="margin: auto">ผลงานของเรา</h1>
+            </span>
           </div>
           <div
             class="col-6 sefl-center q-pa-md"
@@ -346,7 +354,9 @@
             :align="responsiveSize.width <= 600 ? 'left' : 'center'"
           >
             <div class="">
-              <span class="f30 text-white font-b"> ติดต่อเรา </span>
+              <span class="text-white font-b">
+                <h1 class="f30" style="margin: auto">ติดต่อเรา</h1>
+              </span>
             </div>
             <div
               class="row"
@@ -402,8 +412,10 @@
             </div>
 
             <div class="q-mt-md q-mb-sm">
-              <span class="f30 font-b">
-                <span class="text-white">หรือต่อสายด่วนโทร</span>
+              <span class="font-b">
+                <h1 class="f30 text-white" style="margin: auto">
+                  หรือต่อสายด่วนโทร
+                </h1>
               </span>
             </div>
 
