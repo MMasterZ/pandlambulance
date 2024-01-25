@@ -71,8 +71,26 @@
           </div>
         </div>
 
-        <div class="" align="center">
-          <div class="q-pa-md" style="max-width: 350px; width: 100%">
+        <div
+          class="absolute-center"
+          style="
+            left: 20%;
+            top: 25%;
+            transform: rotate(-25deg);
+            z-index: 0;
+            opacity: 0.2;
+          "
+        >
+          <q-img
+            width="250px"
+            height="195px"
+            src="/images/gallery/image-028.jpg"
+          ></q-img>
+        </div>
+
+        <div align="center">
+          <!-- #region Line -->
+          <div class="q-pa-md bg-white" style="max-width: 350px; width: 100%">
             <a
               :href="contactMenu[0].link"
               target="__blank"
@@ -86,6 +104,7 @@
               </div>
             </a>
           </div>
+          <!-- #endregion -->
 
           <div
             class="q-pa-md"
@@ -155,7 +174,7 @@
         style="
           left: 73%;
           top: 25%;
-          transform: rotate(-25deg);
+          transform: rotate(0deg);
           z-index: 2;
           opacity: 0.3;
         "
@@ -166,115 +185,136 @@
           src="/images/gallery/image-013.jpg"
         ></q-img>
       </div>
+
       <div
-        class="absolute-center"
+        class="absolute-bottom"
+        style="
+          left: 70%;
+          bottom: 5%;
+          transform: rotate(0deg);
+          z-index: 2;
+          opacity: 1;
+        "
+      >
+        <q-img width="350px" src="/images/gallery/image-03.jpg"></q-img>
+      </div>
+
+      <!-- <div
+        class="absolute-bottom"
         style="
           left: 80%;
-          top: 65%;
+          bottom: 1%;
           transform: rotate(30deg);
           z-index: 2;
-          opacity: 0.3;
+          opacity: 1;
         "
       >
         <q-img width="200px" src="/images/gallery/image-03.jpg"></q-img>
-      </div>
+      </div> -->
 
       <div
         class="q-pa-md f20 box-body-content"
         :align="responsiveSize.width <= 600 ? 'left' : 'center'"
+        :style="
+          responsiveSize.width <= 600
+            ? 'background-color: rgba(255, 255, 255, 0.5); '
+            : ''
+        "
       >
         <div>
-          <div
-            class="text-title font-b"
-            :align="responsiveSize.width <= 600 ? 'left' : 'center'"
-          >
-            <h1 class="f30" style="margin: auto">เกี่ยวกับเรา</h1>
-          </div>
-          <div align="left">
-            <p>
-              <span class="f30 font-m">P&L Ambulance</span> บริการรถพยาบาล
-              เป็นบริการทางการแพทย์
-              บริการรถพยาบาลจะให้ความช่วยเหลือและดูแลผู้ป่วยหรือฉุกเฉินทางการแพทย์ในสถานการณ์ฉุกเฉินในกรณีฉุกเฉิน
-              รถพยาบาลบางครั้งเรียกว่า "รถฉุกเฉิน"
-              และมีคุณสมบัติพิเศษทางการแพทย์ที่ช่วยในการให้บริการการรักษาเบื้องต้นก่อนนำส่งโรงพยาบาลใกล้เคียงหรือตามความประสงค์ของคนไข้หรือญาติ
-              รถพยาบาลจะมีอุปกรณ์ทางการแพทย์ขั้นพื้นฐาน เช่น เครื่องช่วยหายใจ
-              (defibrillator), เครื่องวัดความดันเลือด, อุปกรณ์การช่วยเหลืออื่น ๆ
-              ที่จำเป็นในการดูแลผู้ป่วยในสถานการณ์ฉุกเฉิน
-              บริการรถพยาบาลจะมีบุคคลากรทางการแพทย์ที่ประจำอยู่บนรถ
-              และกรณีคนไข้ต้องการพยาบาลประจำรถ
-              ทางเรามีเจ้าหน้าที่พยาบาลคอยให้การช่วยเหลือ
-              มีเจ้าหน้าที่ขับรถพยาบาลที่มีความรู้และความเชี่ยวชาญในการให้บริการในสถานการณ์ฉุกเฉิน
-              บริการรถพยาบาลมักถูกเรียกใช้ในสถานการณ์ที่รุนแรง เช่น
-              การเจ็บป่วยที่ร้ายแรง, หรือสถานการณ์ฉุกเฉินทางการแพทย์อื่น ๆ
-              เพื่อให้ผู้ป่วยได้รับการดูแลและการรักษาเบื้องต้นก่อนจะนำส่งโรงพยาบาล
-              การเรียกใช้บริการรถพยาบาลเป็นส่วนสำคัญในการช่วยให้ผู้ป่วยมีโอกาสรอดชีวิตในสถานการณ์ฉุกเฉิน
-              ข้อควรระวัง
-              ในการใช้บริการรถพยาบาลให้เหมาะสมและเรียกใช้ในกรณีที่จำเป็นเท่านั้น
-              เนื่องจากทรัพยากรทางการแพทย์มีจำกัดและควรจัดสรรให้ใช้ให้เหมาะสมกับสถานการณ์และความเร่งด่วนของผู้ป่วยที่ต้องการความช่วยเหลือ
-            </p>
-          </div>
-        </div>
-
-        <div>
-          <div
-            class="text-title font-b"
-            :align="responsiveSize.width <= 600 ? 'left' : 'center'"
-          >
-            <h1 class="f30">บริการรถพยาบาลของเรา</h1>
-          </div>
-          <div class="q-pa-sm font-m">
+          <div>
             <div
-              class="row q-pa-xs"
-              v-for="(itemService, indexService) in serviceList"
-              :key="indexService"
+              class="text-title font-b"
+              :align="responsiveSize.width <= 600 ? 'left' : 'center'"
             >
+              <h1 class="f30" style="margin: auto">เกี่ยวกับเรา</h1>
+            </div>
+            <div align="left">
+              <p>
+                <span class="f30 font-m">P&L Ambulance</span> บริการรถพยาบาล
+                เป็นบริการทางการแพทย์
+                บริการรถพยาบาลจะให้ความช่วยเหลือและดูแลผู้ป่วยหรือฉุกเฉินทางการแพทย์ในสถานการณ์ฉุกเฉินในกรณีฉุกเฉิน
+                รถพยาบาลบางครั้งเรียกว่า "รถฉุกเฉิน"
+                และมีคุณสมบัติพิเศษทางการแพทย์ที่ช่วยในการให้บริการการรักษาเบื้องต้นก่อนนำส่งโรงพยาบาลใกล้เคียงหรือตามความประสงค์ของคนไข้หรือญาติ
+                รถพยาบาลจะมีอุปกรณ์ทางการแพทย์ขั้นพื้นฐาน เช่น เครื่องช่วยหายใจ
+                (defibrillator), เครื่องวัดความดันเลือด, อุปกรณ์การช่วยเหลืออื่น
+                ๆ ที่จำเป็นในการดูแลผู้ป่วยในสถานการณ์ฉุกเฉิน
+                บริการรถพยาบาลจะมีบุคคลากรทางการแพทย์ที่ประจำอยู่บนรถ
+                และกรณีคนไข้ต้องการพยาบาลประจำรถ
+                ทางเรามีเจ้าหน้าที่พยาบาลคอยให้การช่วยเหลือ
+                มีเจ้าหน้าที่ขับรถพยาบาลที่มีความรู้และความเชี่ยวชาญในการให้บริการในสถานการณ์ฉุกเฉิน
+                บริการรถพยาบาลมักถูกเรียกใช้ในสถานการณ์ที่รุนแรง เช่น
+                การเจ็บป่วยที่ร้ายแรง, หรือสถานการณ์ฉุกเฉินทางการแพทย์อื่น ๆ
+                เพื่อให้ผู้ป่วยได้รับการดูแลและการรักษาเบื้องต้นก่อนจะนำส่งโรงพยาบาล
+                การเรียกใช้บริการรถพยาบาลเป็นส่วนสำคัญในการช่วยให้ผู้ป่วยมีโอกาสรอดชีวิตในสถานการณ์ฉุกเฉิน
+                ข้อควรระวัง
+                ในการใช้บริการรถพยาบาลให้เหมาะสมและเรียกใช้ในกรณีที่จำเป็นเท่านั้น
+                เนื่องจากทรัพยากรทางการแพทย์มีจำกัดและควรจัดสรรให้ใช้ให้เหมาะสมกับสถานการณ์และความเร่งด่วนของผู้ป่วยที่ต้องการความช่วยเหลือ
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <div
+              class="text-title font-b"
+              :align="responsiveSize.width <= 600 ? 'left' : 'center'"
+            >
+              <h1 class="f30">บริการรถพยาบาลของเรา</h1>
+            </div>
+            <div class="q-pa-sm font-m">
               <div
-                class="col-1 width-fit"
-                style="width: fit-content"
-                :class="{
-                  'q-mr-sm': responsiveSize.width <= 600,
-                  'q-mr-md': responsiveSize.width > 600,
-                }"
+                class="row q-pa-xs"
+                v-for="(itemService, indexService) in serviceList"
+                :key="indexService"
               >
-                <q-icon
-                  name="fas fa-check-circle"
-                  class="text-green"
-                  size="20px"
-                ></q-icon>
-              </div>
-              <div align="left" class="col self-center">
-                <p>{{ `${itemService}` }}</p>
+                <div
+                  class="col-1 width-fit"
+                  style="width: fit-content"
+                  :class="{
+                    'q-mr-sm': responsiveSize.width <= 600,
+                    'q-mr-md': responsiveSize.width > 600,
+                  }"
+                >
+                  <q-icon
+                    name="fas fa-check-circle"
+                    class="text-green"
+                    size="20px"
+                  ></q-icon>
+                </div>
+                <div align="left" class="col self-center">
+                  <p>{{ `${itemService}` }}</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="q-my-md">
-          <div class="text-title font-b">
-            <h1 class="f30">บริการรถพยาบาล Standby</h1>
-          </div>
-          <div class="q-pa-sm font-m">
-            <div
-              class="row q-pa-xs"
-              v-for="(itemStandby, indexStandby) in standbyList"
-              :key="indexStandby"
-            >
+          <div class="q-my-md">
+            <div class="text-title font-b">
+              <h1 class="f30">บริการรถพยาบาล Standby</h1>
+            </div>
+            <div class="q-pa-sm font-m">
               <div
-                class="col-1 width-fit"
-                style="width: fit-content"
-                :class="{
-                  'q-mr-sm': responsiveSize.width <= 600,
-                  'q-mr-md': responsiveSize.width > 600,
-                }"
+                class="row q-pa-xs"
+                v-for="(itemStandby, indexStandby) in standbyList"
+                :key="indexStandby"
               >
-                <q-icon
-                  name="fas fa-check-circle"
-                  class="text-green"
-                  size="20px"
-                ></q-icon>
-              </div>
-              <div align="left" class="col self-start">
-                <p>{{ `${itemStandby}` }}</p>
+                <div
+                  class="col-1 width-fit"
+                  style="width: fit-content"
+                  :class="{
+                    'q-mr-sm': responsiveSize.width <= 600,
+                    'q-mr-md': responsiveSize.width > 600,
+                  }"
+                >
+                  <q-icon
+                    name="fas fa-check-circle"
+                    class="text-green"
+                    size="20px"
+                  ></q-icon>
+                </div>
+                <div align="left" class="col self-start">
+                  <p>{{ `${itemStandby}` }}</p>
+                </div>
               </div>
             </div>
           </div>
@@ -333,7 +373,7 @@
                 <q-carousel-slide
                   :name="i"
                   :img-src="`/images/gallery/image-0${i}.jpg`"
-                  v-for="i in 20"
+                  v-for="i in 33"
                   :key="i"
                 />
 
@@ -363,12 +403,6 @@
                   </q-carousel-control>
                 </template>
               </q-carousel>
-
-              <!-- <q-img
-                fit="contain"
-                class="fit"
-                :src="`/images/gallery/image-0${slideImage}.jpg`"
-              ></q-img> -->
             </div>
           </div>
         </div>
