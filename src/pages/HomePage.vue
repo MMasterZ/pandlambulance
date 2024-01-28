@@ -47,8 +47,10 @@
         }"
       >
         <div class="relative-position q-pa-md fit">
-          <div class="font-b">
-            <h1 class="text-header-brand">P&L Ambulance</h1>
+          <div class="font-b q-py-md">
+            <h1 class="text-header-brand" style="line-height: 1">
+              P&L Ambulance
+            </h1>
           </div>
           <div class="f20 font-m text-content-brand">
             <p>
@@ -62,264 +64,437 @@
     </div>
     <!-- #endregion -->
 
-    <!-- #region Content 1 -->
-    <div class="body-main relative-position" algn="center">
-      <div class="q-pa-md" style="max-width: 1200px; width: 100%; margin: auto">
-        <div class="q-my-md">
-          <div class="text-title font-b" align="center">
-            <h1 class="f30">สอบถามข้อมูลและค่าบริการ</h1>
-          </div>
-        </div>
-
-        <div
-          class="absolute-center"
-          style="
-            left: 20%;
-            top: 25%;
-            transform: rotate(-25deg);
-            z-index: 0;
-            opacity: 0.2;
-          "
-        >
-          <q-img
-            width="250px"
-            height="195px"
-            src="/images/gallery/image-028.jpg"
-          ></q-img>
-        </div>
-
-        <div align="center">
-          <!-- #region Line -->
-          <div class="q-pa-md bg-white" style="max-width: 350px; width: 100%">
-            <a
-              :href="contactMenu[0].link"
-              target="__blank"
-              style="text-decoration: none"
-            >
-              <div class="box-contact-fast bg-green">
-                <q-img :src="contactMenu[0].image"></q-img>
-              </div>
-              <div class="f20 q-pa-md text-title">
-                {{ contactMenu[0].text }}
-              </div>
-            </a>
-          </div>
-          <!-- #endregion -->
-
-          <div
-            class="q-pa-md"
-            style="max-width: 400px; width: 43%; min-width: 350px"
-          >
-            <a
-              :href="`${contactMenu[2].link}`"
-              style="text-decoration: none"
-              target="__blank"
-            >
-              <q-btn round push class="box-contact-phone">
-                <div class="row justify-center q-pa-sm" align="left">
-                  <div class="q-pa-sm self-center">
-                    <q-icon name="fas fa-phone" size="30px"></q-icon>
-                  </div>
-                  <div class="self-center f26 font-m q-pa-sm">
-                    {{ `083-058-7408 (คลิ๊ก)` }}
-                  </div>
-                  <div class="f16">
-                    {{ contactMenu[2].subText }}
-                  </div>
-                </div>
-              </q-btn>
-            </a>
-          </div>
-
-          <div
-            class="q-pa-md"
-            style="max-width: 400px; width: 43%; min-width: 350px"
-          >
-            <a
-              :href="`tel:0617749222`"
-              style="text-decoration: none"
-              target="__blank"
-            >
-              <q-btn
-                round
-                push
-                class="box-contact-phone"
-                style="animation-delay: 0.5s"
-              >
-                <div class="row justify-center q-pa-sm" align="left">
-                  <div class="q-pa-sm self-center">
-                    <q-icon name="fas fa-phone" size="30px"></q-icon>
-                  </div>
-                  <div class="self-center f26 font-m q-pa-sm">
-                    {{ `061-774-9222 (คลิ๊ก)` }}
-                  </div>
-                  <div class="f16">
-                    {{ "(คุณป๊อป)" }}
-                  </div>
-                </div>
-              </q-btn>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- #endregion -->
-
-    <div class="border-separate q-my-md"></div>
-
-    <!-- #region Content 2 -->
-    <div class="body-main relative-position" algn="center">
+    <!-- #region Group 1 -->
+    <div class="relative-position" style="overflow: hidden">
       <div
-        class="absolute-center"
+        v-if="responsiveSize.width < 600"
+        class="absolute-top-right"
         style="
-          left: 73%;
-          top: 25%;
-          transform: rotate(0deg);
+          top: 500px;
+          right: -70px;
+          max-width: 350px;
+          width: 80%;
+          min-width: 200px;
+          opacity: 0.8;
           z-index: 2;
-          opacity: 0.3;
         "
       >
         <q-img
-          width="250px"
-          height="195px"
-          src="/images/gallery/image-013.jpg"
+          width="100%"
+          style="transform: rotate(15deg)"
+          src="/images/gallery/image-033.jpg"
+          no-spinner
+          no-transition
         ></q-img>
       </div>
 
+      <!-- #region Content 1 -->
       <div
-        class="absolute-bottom"
-        style="
-          left: 70%;
-          bottom: 5%;
-          transform: rotate(0deg);
-          z-index: 2;
-          opacity: 1;
-        "
+        class="body-main relative-position"
+        style="overflow: visible"
+        algn="center"
       >
-        <q-img width="350px" src="/images/gallery/image-03.jpg"></q-img>
-      </div>
+        <!-- #region Background -->
+        <!-- <div class="absolute-center" style="top: 40%; width: 1920px">
+          <q-img
+            src="/images/gallery/image-033.jpg"
+            no-spinner
+            no-transition
+          ></q-img>
+        </div>
+        <div
+          style="background-color: rgba(255, 255, 255, 0.7)"
+          class="fit absolute-center"
+        ></div> -->
+        <!-- #endregion -->
 
-      <!-- <div
-        class="absolute-bottom"
-        style="
-          left: 80%;
-          bottom: 1%;
-          transform: rotate(30deg);
-          z-index: 2;
-          opacity: 1;
-        "
-      >
-        <q-img width="200px" src="/images/gallery/image-03.jpg"></q-img>
-      </div> -->
-
-      <div
-        class="q-pa-md f20 box-body-content"
-        :align="responsiveSize.width <= 600 ? 'left' : 'center'"
-        :style="
-          responsiveSize.width <= 600
-            ? 'background-color: rgba(255, 255, 255, 0.5); '
-            : ''
-        "
-      >
-        <div>
-          <div>
-            <div
-              class="text-title font-b"
-              :align="responsiveSize.width <= 600 ? 'left' : 'center'"
-            >
-              <h1 class="f30" style="margin: auto">เกี่ยวกับเรา</h1>
-            </div>
-            <div align="left">
-              <p>
-                <span class="f30 font-m">P&L Ambulance</span> บริการรถพยาบาล
-                เป็นบริการทางการแพทย์
-                บริการรถพยาบาลจะให้ความช่วยเหลือและดูแลผู้ป่วยหรือฉุกเฉินทางการแพทย์ในสถานการณ์ฉุกเฉินในกรณีฉุกเฉิน
-                รถพยาบาลบางครั้งเรียกว่า "รถฉุกเฉิน"
-                และมีคุณสมบัติพิเศษทางการแพทย์ที่ช่วยในการให้บริการการรักษาเบื้องต้นก่อนนำส่งโรงพยาบาลใกล้เคียงหรือตามความประสงค์ของคนไข้หรือญาติ
-                รถพยาบาลจะมีอุปกรณ์ทางการแพทย์ขั้นพื้นฐาน เช่น เครื่องช่วยหายใจ
-                (defibrillator), เครื่องวัดความดันเลือด, อุปกรณ์การช่วยเหลืออื่น
-                ๆ ที่จำเป็นในการดูแลผู้ป่วยในสถานการณ์ฉุกเฉิน
-                บริการรถพยาบาลจะมีบุคคลากรทางการแพทย์ที่ประจำอยู่บนรถ
-                และกรณีคนไข้ต้องการพยาบาลประจำรถ
-                ทางเรามีเจ้าหน้าที่พยาบาลคอยให้การช่วยเหลือ
-                มีเจ้าหน้าที่ขับรถพยาบาลที่มีความรู้และความเชี่ยวชาญในการให้บริการในสถานการณ์ฉุกเฉิน
-                บริการรถพยาบาลมักถูกเรียกใช้ในสถานการณ์ที่รุนแรง เช่น
-                การเจ็บป่วยที่ร้ายแรง, หรือสถานการณ์ฉุกเฉินทางการแพทย์อื่น ๆ
-                เพื่อให้ผู้ป่วยได้รับการดูแลและการรักษาเบื้องต้นก่อนจะนำส่งโรงพยาบาล
-                การเรียกใช้บริการรถพยาบาลเป็นส่วนสำคัญในการช่วยให้ผู้ป่วยมีโอกาสรอดชีวิตในสถานการณ์ฉุกเฉิน
-                ข้อควรระวัง
-                ในการใช้บริการรถพยาบาลให้เหมาะสมและเรียกใช้ในกรณีที่จำเป็นเท่านั้น
-                เนื่องจากทรัพยากรทางการแพทย์มีจำกัดและควรจัดสรรให้ใช้ให้เหมาะสมกับสถานการณ์และความเร่งด่วนของผู้ป่วยที่ต้องการความช่วยเหลือ
-              </p>
-            </div>
+        <!-- #region Image PC -->
+        <div v-if="responsiveSize.width >= 1024">
+          <div
+            class="absolute-top"
+            style="
+              max-width: 500px;
+              width: 45%;
+              min-width: 300px;
+              left: 15px;
+              top: 3%;
+              transform: rotate(-1deg);
+              z-index: 2;
+            "
+          >
+            <q-img
+              width="100%"
+              src="/images/gallery/image-031.jpg"
+              no-spinner
+              no-transition
+            ></q-img>
           </div>
 
-          <div>
+          <div
+            class="absolute-top"
+            style="
+              max-width: 500px;
+              width: 45%;
+              min-width: 300px;
+              left: 50px;
+              top: 50%;
+              transform: rotate(1deg);
+              z-index: 2;
+            "
+          >
+            <q-img
+              width="100%"
+              src="/images/gallery/image-032.jpg"
+              no-spinner
+              no-transition
+            ></q-img>
+          </div>
+
+          <div
+            class="absolute-top-right"
+            style="
+              max-width: 500px;
+              width: 45%;
+              min-width: 300px;
+              right: 15px;
+              top: 50%;
+              transform: rotate(-1deg);
+              z-index: 2;
+            "
+          >
+            <q-img
+              width="100%"
+              src="/images/gallery/image-030.jpg"
+              no-spinner
+              no-transition
+            ></q-img>
+          </div>
+
+          <div
+            class="absolute-top-right"
+            style="
+              max-width: 500px;
+              width: 45%;
+              min-width: 300px;
+              top: 30px;
+              right: 35px;
+              transform: rotate(1deg);
+              z-index: 2;
+            "
+          >
+            <q-img
+              width="100%"
+              src="/images/gallery/image-029.jpg"
+              no-spinner
+              no-transition
+            ></q-img>
+          </div>
+        </div>
+        <!-- #endregion -->
+
+        <!-- #region Image Mobile -->
+        <div v-if="responsiveSize.width < 1024">
+          <div
+            class="absolute-top-left"
+            style="
+              top: 10px;
+              left: -30px;
+              max-width: 350px;
+              width: 80%;
+              min-width: 200px;
+              opacity: 0.8;
+              z-index: 2;
+            "
+          >
+            <q-img
+              width="100%"
+              style="transform: rotate(-15deg) rotateY(180deg)"
+              src="/images/gallery/image-029.jpg"
+              no-spinner
+              no-transition
+            ></q-img>
+          </div>
+        </div>
+
+        <!-- #region Contact -->
+        <div
+          class="q-pa-md relative-position"
+          style="max-width: 1200px; width: 100%; margin: auto; z-index: 3"
+        >
+          <div class="q-my-lg" align="center">
             <div
-              class="text-title font-b"
-              :align="responsiveSize.width <= 600 ? 'left' : 'center'"
+              class="text-title font-b width-fit q-pa-md"
+              :style="
+                responsiveSize.width >= 1024
+                  ? 'background-color: rgba(255, 255, 255, 0.5)'
+                  : 'background-color: rgba(255, 255, 255, 1)'
+              "
+              align="center"
             >
-              <h1 class="f30">บริการรถพยาบาลของเรา</h1>
+              <h1 class="f30" style="line-height: 0">
+                สอบถามข้อมูลและค่าบริการ
+              </h1>
             </div>
-            <div class="q-pa-sm font-m">
-              <div
-                class="row q-pa-xs"
-                v-for="(itemService, indexService) in serviceList"
-                :key="indexService"
+          </div>
+          <div align="center">
+            <!-- #region Line -->
+            <div
+              class="q-py-md"
+              :style="responsiveSize.width <= 600 ? '' : ''"
+              style="max-width: 300px; min-width: 250px; width: 80%"
+            >
+              <a
+                :href="contactMenu[0].link"
+                target="__blank"
+                style="text-decoration: none"
               >
-                <div
-                  class="col-1 width-fit"
-                  style="width: fit-content"
-                  :class="{
-                    'q-mr-sm': responsiveSize.width <= 600,
-                    'q-mr-md': responsiveSize.width > 600,
-                  }"
-                >
-                  <q-icon
-                    name="fas fa-check-circle"
-                    class="text-green"
-                    size="20px"
-                  ></q-icon>
+                <div class="box-contact-fast bg-green">
+                  <q-img
+                    :src="contactMenu[0].image"
+                    no-spinner
+                    no-transition
+                  ></q-img>
                 </div>
-                <div align="left" class="col self-center">
-                  <p>{{ `${itemService}` }}</p>
+                <div class="f20 q-pa-md text-title">
+                  {{ contactMenu[0].text }}
+                </div>
+              </a>
+            </div>
+            <!-- #endregion -->
+
+            <!-- #region Button Call 1 -->
+            <div
+              class="q-pa-md relative-position"
+              style="max-width: 400px; width: 43%; min-width: 300px; z-index: 3"
+            >
+              <a
+                :href="`${contactMenu[2].link}`"
+                style="text-decoration: none"
+                target="__blank"
+              >
+                <q-btn round push class="box-contact-phone">
+                  <div class="row justify-center q-pa-sm" align="left">
+                    <div class="q-pa-sm self-center">
+                      <q-icon name="fas fa-phone" size="25px"></q-icon>
+                    </div>
+                    <div class="self-center f26 phone font-m q-pa-sm">
+                      {{ `083-058-7408 (คลิ๊ก)` }}
+                    </div>
+                    <div class="f16 phone">
+                      {{ contactMenu[2].subText }}
+                    </div>
+                  </div>
+                </q-btn>
+              </a>
+            </div>
+            <!-- #endregion -->
+
+            <!-- #region Button Call 2 -->
+            <div
+              class="q-pa-md relative-position"
+              style="max-width: 400px; width: 43%; min-width: 300px; z-index: 3"
+            >
+              <a
+                :href="`tel:0617749222`"
+                style="text-decoration: none"
+                target="__blank"
+              >
+                <q-btn
+                  round
+                  push
+                  class="box-contact-phone"
+                  style="animation-delay: 0.5s"
+                >
+                  <div class="row justify-center q-pa-sm" align="left">
+                    <div class="q-pa-sm self-center">
+                      <q-icon name="fas fa-phone" size="30px"></q-icon>
+                    </div>
+                    <div class="self-center f26 phone font-m q-pa-sm">
+                      {{ `061-774-9222 (คลิ๊ก)` }}
+                    </div>
+                    <div class="col-12 f16 phone" align="center">
+                      {{ "(คุณป๊อป)" }}
+                    </div>
+                  </div>
+                </q-btn>
+              </a>
+            </div>
+            <!-- #endregion -->
+          </div>
+        </div>
+        <!-- #endregion -->
+      </div>
+      <!-- #endregion -->
+
+      <div class="border-separate q-mb-md"></div>
+
+      <!-- #region Content 2 -->
+      <div class="body-main relative-position" algn="center">
+        <div
+          class="absolute-center"
+          style="
+            left: 70%;
+            top: 30%;
+            transform: rotate(-1deg);
+            z-index: 2;
+            opacity: 0.8;
+          "
+        >
+          <q-img
+            width="450px"
+            src="/images/gallery/image-028.jpg"
+            no-spinner
+            no-transition
+          ></q-img>
+        </div>
+
+        <div
+          class="absolute-bottom"
+          style="
+            left: 70%;
+            bottom: 5%;
+            transform: rotate(1deg);
+            z-index: 2;
+            opacity: 0.8;
+          "
+        >
+          <q-img
+            width="400px"
+            src="/images/gallery/image-03.jpg"
+            no-spinner
+            no-transition
+          ></q-img>
+        </div>
+
+        <div
+          class="q-px-md q-pb-md f20 box-body-content"
+          :align="responsiveSize.width <= 600 ? 'left' : 'center'"
+          :style="responsiveSize.width <= 1024 ? '' : ''"
+        >
+          <div>
+            <div>
+              <div
+                class="text-title font-b"
+                :align="responsiveSize.width <= 600 ? 'left' : 'center'"
+              >
+                <h1 class="f30" style="margin: auto; line-height: 3">
+                  เกี่ยวกับเรา
+                </h1>
+              </div>
+              <div
+                align="left"
+                :style="
+                  responsiveSize.width <= 1024
+                    ? 'background-color: rgba(255, 255, 255, 0.7)'
+                    : ''
+                "
+              >
+                <p>
+                  <span class="f30 font-m">P&L Ambulance</span> บริการรถพยาบาล
+                  เป็นบริการทางการแพทย์
+                  บริการรถพยาบาลจะให้ความช่วยเหลือและดูแลผู้ป่วยหรือฉุกเฉินทางการแพทย์ในสถานการณ์ฉุกเฉินในกรณีฉุกเฉิน
+                  รถพยาบาลบางครั้งเรียกว่า "รถฉุกเฉิน"
+                  และมีคุณสมบัติพิเศษทางการแพทย์ที่ช่วยในการให้บริการการรักษาเบื้องต้นก่อนนำส่งโรงพยาบาลใกล้เคียงหรือตามความประสงค์ของคนไข้หรือญาติ
+                  รถพยาบาลจะมีอุปกรณ์ทางการแพทย์ขั้นพื้นฐาน เช่น
+                  เครื่องช่วยหายใจ (defibrillator), เครื่องวัดความดันเลือด,
+                  อุปกรณ์การช่วยเหลืออื่น ๆ
+                  ที่จำเป็นในการดูแลผู้ป่วยในสถานการณ์ฉุกเฉิน
+                  บริการรถพยาบาลจะมีบุคคลากรทางการแพทย์ที่ประจำอยู่บนรถ
+                  และกรณีคนไข้ต้องการพยาบาลประจำรถ
+                  ทางเรามีเจ้าหน้าที่พยาบาลคอยให้การช่วยเหลือ
+                  มีเจ้าหน้าที่ขับรถพยาบาลที่มีความรู้และความเชี่ยวชาญในการให้บริการในสถานการณ์ฉุกเฉิน
+                  บริการรถพยาบาลมักถูกเรียกใช้ในสถานการณ์ที่รุนแรง เช่น
+                  การเจ็บป่วยที่ร้ายแรง, หรือสถานการณ์ฉุกเฉินทางการแพทย์อื่น ๆ
+                  เพื่อให้ผู้ป่วยได้รับการดูแลและการรักษาเบื้องต้นก่อนจะนำส่งโรงพยาบาล
+                  การเรียกใช้บริการรถพยาบาลเป็นส่วนสำคัญในการช่วยให้ผู้ป่วยมีโอกาสรอดชีวิตในสถานการณ์ฉุกเฉิน
+                  ข้อควรระวัง
+                  ในการใช้บริการรถพยาบาลให้เหมาะสมและเรียกใช้ในกรณีที่จำเป็นเท่านั้น
+                  เนื่องจากทรัพยากรทางการแพทย์มีจำกัดและควรจัดสรรให้ใช้ให้เหมาะสมกับสถานการณ์และความเร่งด่วนของผู้ป่วยที่ต้องการความช่วยเหลือ
+                </p>
+              </div>
+            </div>
+
+            <div
+              :style="
+                responsiveSize.width <= 1024
+                  ? 'background-color: rgba(255, 255, 255, 0.7)'
+                  : ''
+              "
+            >
+              <div
+                class="text-title font-b"
+                :align="responsiveSize.width <= 600 ? 'left' : 'center'"
+              >
+                <h1 class="f30">บริการรถพยาบาลของเรา</h1>
+              </div>
+              <div class="q-pa-sm font-m">
+                <div
+                  class="row q-pa-xs"
+                  v-for="(itemService, indexService) in serviceList"
+                  :key="indexService"
+                >
+                  <div
+                    class="col-1 width-fit"
+                    style="width: fit-content"
+                    :class="{
+                      'q-mr-sm': responsiveSize.width <= 600,
+                      'q-mr-md': responsiveSize.width > 600,
+                    }"
+                  >
+                    <q-icon
+                      name="fas fa-check-circle"
+                      class="text-green"
+                      size="20px"
+                    ></q-icon>
+                  </div>
+                  <div align="left" class="col self-center">
+                    <p>{{ `${itemService}` }}</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="q-my-md">
-            <div class="text-title font-b">
-              <h1 class="f30">บริการรถพยาบาล Standby</h1>
-            </div>
-            <div class="q-pa-sm font-m">
-              <div
-                class="row q-pa-xs"
-                v-for="(itemStandby, indexStandby) in standbyList"
-                :key="indexStandby"
-              >
+            <div
+              class="q-my-md"
+              :style="
+                responsiveSize.width <= 1024
+                  ? 'background-color: rgba(255, 255, 255, 0.7)'
+                  : ''
+              "
+            >
+              <div class="text-title font-b">
+                <h1 class="f30">บริการรถพยาบาล Standby</h1>
+              </div>
+              <div class="q-pa-sm font-m">
                 <div
-                  class="col-1 width-fit"
-                  style="width: fit-content"
-                  :class="{
-                    'q-mr-sm': responsiveSize.width <= 600,
-                    'q-mr-md': responsiveSize.width > 600,
-                  }"
+                  class="row q-pa-xs"
+                  v-for="(itemStandby, indexStandby) in standbyList"
+                  :key="indexStandby"
                 >
-                  <q-icon
-                    name="fas fa-check-circle"
-                    class="text-green"
-                    size="20px"
-                  ></q-icon>
-                </div>
-                <div align="left" class="col self-start">
-                  <p>{{ `${itemStandby}` }}</p>
+                  <div
+                    class="col-1 width-fit"
+                    style="width: fit-content"
+                    :class="{
+                      'q-mr-sm': responsiveSize.width <= 600,
+                      'q-mr-md': responsiveSize.width > 600,
+                    }"
+                  >
+                    <q-icon
+                      name="fas fa-check-circle"
+                      class="text-green"
+                      size="20px"
+                    ></q-icon>
+                  </div>
+                  <div align="left" class="col self-start">
+                    <p>{{ `${itemStandby}` }}</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- #endregion -->
     </div>
     <!-- #endregion -->
 
