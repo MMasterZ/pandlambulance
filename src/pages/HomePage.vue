@@ -66,48 +66,12 @@
 
     <!-- #region Group 1 -->
     <div class="relative-position" style="overflow: hidden">
-      <div
-        v-if="responsiveSize.width < 600"
-        class="absolute-top-right"
-        style="
-          top: 500px;
-          right: -70px;
-          max-width: 350px;
-          width: 80%;
-          min-width: 200px;
-          opacity: 0.8;
-          z-index: 2;
-        "
-      >
-        <q-img
-          width="100%"
-          style="transform: rotate(15deg)"
-          src="/images/gallery/image-033.jpg"
-          no-spinner
-          no-transition
-        ></q-img>
-      </div>
-
       <!-- #region Content 1 -->
       <div
         class="body-main relative-position"
         style="overflow: visible"
         algn="center"
       >
-        <!-- #region Background -->
-        <!-- <div class="absolute-center" style="top: 40%; width: 1920px">
-          <q-img
-            src="/images/gallery/image-033.jpg"
-            no-spinner
-            no-transition
-          ></q-img>
-        </div>
-        <div
-          style="background-color: rgba(255, 255, 255, 0.7)"
-          class="fit absolute-center"
-        ></div> -->
-        <!-- #endregion -->
-
         <!-- #region Image PC -->
         <div v-if="responsiveSize.width >= 1024">
           <div
@@ -137,7 +101,7 @@
               width: 45%;
               min-width: 300px;
               left: 50px;
-              top: 50%;
+              top: 55%;
               transform: rotate(1deg);
               z-index: 2;
             "
@@ -157,7 +121,7 @@
               width: 45%;
               min-width: 300px;
               right: 15px;
-              top: 50%;
+              top: 55%;
               transform: rotate(-1deg);
               z-index: 2;
             "
@@ -197,11 +161,11 @@
           <div
             class="absolute-top-left"
             style="
-              top: 10px;
+              top: -30px;
               left: -30px;
               max-width: 350px;
-              width: 80%;
-              min-width: 200px;
+              width: 100%;
+              min-width: 300px;
               opacity: 0.8;
               z-index: 2;
             "
@@ -209,7 +173,28 @@
             <q-img
               width="100%"
               style="transform: rotate(-15deg) rotateY(180deg)"
-              src="/images/gallery/image-029.jpg"
+              src="/images/gallery/image-030.jpg"
+              no-spinner
+              no-transition
+            ></q-img>
+          </div>
+
+          <div
+            class="absolute-top-right"
+            style="
+              top: 500px;
+              right: -70px;
+              max-width: 350px;
+              width: 100%;
+              min-width: 300px;
+              opacity: 0.8;
+              z-index: 2;
+            "
+          >
+            <q-img
+              width="100%"
+              style="transform: rotate(15deg)"
+              src="/images/gallery/image-031.jpg"
               no-spinner
               no-transition
             ></q-img>
@@ -236,6 +221,7 @@
               </h1>
             </div>
           </div>
+
           <div align="center">
             <!-- #region Line -->
             <div
@@ -870,5 +856,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
